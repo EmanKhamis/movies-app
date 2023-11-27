@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 const MovieDetails = () => {
     const param = useParams();
+    console.log(param)
     const [movie, setMovie] = useState([])
 
     //get  movie by details 
@@ -14,6 +15,7 @@ const MovieDetails = () => {
     useEffect(() => {
         getMovieDetails();
     }, [])
+    console.log(movie);
     return (
         <div>
             <Row className="justify-content-center">

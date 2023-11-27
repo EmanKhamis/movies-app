@@ -3,10 +3,10 @@ import { Container, Col, Row } from "react-bootstrap";
 import logo from '../images/logo.png'
 import { Link } from 'react-router-dom'
 const NavBar = ({ search }) => {
-
-  const onSearch = (word) => {
-    search(word)
-  }
+     const onSearch =(word) =>{
+          search(word);
+     }
+  
   return (
     <div className="nav-style w-100">
       <Container>
@@ -19,7 +19,7 @@ const NavBar = ({ search }) => {
           <Col xs="10" lg="11" className=" d-flex align-items-center">
             <div className="search  w-100">
               <i className="fa fa-search"></i>
-              <input onChange={(e) => onSearch(e.target.value)} type="text" className="form-control" placeholder="ابحث" />
+              <input onChange={e => onSearch(e.target.value)}  type="text" className="form-control" placeholder="ابحث" />
             </div>
           </Col>
         </Row>
